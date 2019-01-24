@@ -27,9 +27,6 @@
             border-radius: 2px;
             margin-left: 10px;
         }
-        /*.clear {
-            clear: both;
-        }*/
     </style>
 </head>
 <body>
@@ -44,7 +41,7 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用setSelectedValue($('#fixedSelect'), 2)设置value值，第一个参数为下拉框div的
                 jQuery对象，第二个参数为可选项value<br/><br/>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用getSelectedVlaue($('#fixedSelect'))获取选中value，getSelectedText($('#fixedSelect'))
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用getSelectedValue($('#fixedSelect'))获取选中value，getSelectedText($('#fixedSelect'))
                 获取选中的text
             </p>
             <div class="select" id="fixedSelect">
@@ -74,11 +71,11 @@
         <div class="dynamic">
             <h4>下拉框可选项为动态数据</h4>
             <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;写个div标签，class设置select，需要默认选项则添加data-fault，并设置属性值为默认选项，
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;写个div标签，class设置select，需要默认选项则添加data-default，并设置属性值为默认选项，
                 在加载时也会把默认选项添加到可选项列表。例如下面二级选择框，页面初始化不加载该下拉框，最好在div的值里也把默认值写进去
             </p>
-            <span>一级:</span><div class="select" id="dynamicSelect1" data-fault="--请选择--"></div>
-            <span>二级:</span><div class="select" id="dynamicSelect2" data-fault="--请选择--">--请选择--</div>
+            <span>一级:</span><div class="select" id="dynamicSelect1" data-default="--请选择--"></div>
+            <span>二级:</span><div class="select" id="dynamicSelect2" data-default="--请选择--">--请选择--</div>
         </div>
     </div>
 

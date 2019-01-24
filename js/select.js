@@ -1,8 +1,8 @@
 /**
  * 初始化下拉框
- * @param $select   下拉框div元素jquery对象
- * @param isFixed   可选项是否固定数据
- * @param valuesArr 动态可选项数据json数组，格式：[{"value":"1","text":"可选值1"},{"value":"2","text":"可选值2"}]
+ * @param $select   下拉框div元素jQuery对象
+ * @param isFixed   可选项是否固定数据，固定数据传true，动态数据传false
+ * @param valuesArr 动态可选项数据json数组，固定数据时传null，格式：[{"value":"1","text":"可选值1"},{"value":"2","text":"可选值2"}]
  * @param func      修改选中值的回调函数
  */
 function initSelect($select, isFixed, valuesArr, func) {
@@ -65,7 +65,7 @@ function bindEvents($select, func) {
 
 //加载可选项
 function generateSelectOption($select, valuesArr) {
-    var defaultText = $select.attr('data-fault');
+    var defaultText = $select.attr('data-default');
     var width = $select.width();
     var selectChidren = '<i></i><span class="checkspan" data-value="">' + (defaultText || '') + '</span><ul style="width:' + (width + 20) + 'px;">';
     var dataObj = {};
